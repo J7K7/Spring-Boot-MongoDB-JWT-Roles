@@ -1,0 +1,38 @@
+server:
+  port: 8855
+
+spring:
+  application:
+    name: Trace Stone
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/demo
+      auto-index-creation: true
+  path:
+    domain: localhost:8855/
+    upload: upload
+    image: /images/
+    doc: /documents/
+  servlet:
+    multipart:
+      max-file-size: 10MB
+  server:
+    error:
+      include-message: always
+  mail:
+    host: mail.stpl.com
+    port: 587
+    username: jainish.vyas@stpl.com
+    password: Abc@12345
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+  web:
+    resources:
+      static-locations: file:./upload/
+
+debug: true
